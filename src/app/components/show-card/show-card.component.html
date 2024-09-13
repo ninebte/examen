@@ -23,7 +23,7 @@
                 <form #form="ngForm" (ngSubmit)="editShow(form)">
                     <div class="mb-3">
                       <label for="name" class="form-label">Nombre</label>
-                      <input type="text" class="form-control" id="name" name="name " [ngModel]="show.name">
+                      <input type="text" class="form-control" id="name" name="name" [ngModel]="show.name">
                     </div>
                     <div class="mb-3">
                       <label for="description" class="form-label">Descripción</label>
@@ -31,7 +31,7 @@
                     </div>
                     <div class="mb-3">
                       <label for="episodes" class="form-label">Imagen</label>
-                      <input type="text" class="form-control" id="image" name="episodes" [ngModel]="show.image">
+                      <input type="text" class="form-control" id="image" name="image" [ngModel]="show.image">
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-outline-secondary" (click)="modal.close('Save click')" >Guardar Cambios</button>
