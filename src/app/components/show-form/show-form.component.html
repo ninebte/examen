@@ -1,0 +1,45 @@
+<form #form="ngForm" (ngSubmit)="onFormSubmit(form)" class="row g-3">
+    <!-- Solo con NGMODEL -->
+    <!-- <div class="col-auto">
+      <input type="text" class="form-control" placeholder="Nombre" [(ngModel)]="name">
+    </div>
+    <div class="col-auto">
+      <button type="button" (click)="createElement()" class="btn btn-primary mb-3">Agregar</button>
+    </div>
+    -->
+    <!-- BASADO EN PLANTILLAS -->
+    <div class="col-auto">
+      <input type="text" name="name" class="form-control" placeholder="Nombre" ngModel required>
+    </div>
+    <div class="col-auto">
+      <input type="text" name="image" class="form-control" placeholder="Imagen" ngModel required>
+    </div>
+    <div class="col-auto">
+      <input type="text" name="description" class="form-control" placeholder="Descripción" ngModel required>
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary mb-3">Agregar</button>
+    </div>
+    <div *ngIf="form.submitted && !form.valid" class="alert alert-danger" role="alert">
+        Datos incompletos
+    </div>
+  </form>  
+
+  <!-- <form [formGroup]="form" (ngSubmit)="createElement()" class="row g-3">
+    <!-- BASADO EN REACTIVOS -->
+    <!-- <div class="col-auto">
+      <input type="text" formControlName="name" class="form-control" placeholder="Nombre" >
+    </div>
+    <div class="col-auto">
+      <input type="text" formControlName="image" class="form-control" placeholder="Imagen" >
+    </div>
+    <div class="col-auto">
+      <input type="text" formControlName="description" class="form-control" placeholder="Descripción" >
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary mb-3">Agregar</button>
+    </div>
+    <div *ngIf="!form.valid && isFormSubmitted" class="alert alert-danger" role="alert">
+        Datos incompletos
+    </div>
+  </form> --> 

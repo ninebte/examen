@@ -1,0 +1,10 @@
+<div class="btn-group me-3">
+	<div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+		<button type="button" class="btn btn-outline-primary" ngbDropdownToggle>Filtrar</button>
+		<div class="dropdown-menu" ngbDropdownMenu>
+			<button ngbDropdownItem (click)="ordenarAlfabeticoClick()">Orden Alfabetico</button>
+			<button ngbDropdownItem (click)="ordenarAnoClick()">Año</button>
+			<button ngbDropdownItem (click)="ordenarEpisodiosClick()">Episodios</button>
+		</div>
+	</div>
+</div>
